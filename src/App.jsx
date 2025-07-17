@@ -1,6 +1,7 @@
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";  // Importamos React Router
 import Navbar from "./components/Navbar";  // Importamos la Navbar
 
@@ -14,7 +15,8 @@ import GlobalTour from "./pages/GlobalTour";
 import Omm from "./pages/Omm";
 import Contacto from "./pages/Contacto";
 import Temaiken from "./pages/Temaiken";
-
+import MotoTur from './pages/MotoTur';
+import Representaciones from './pages/Representaciones';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route path="/temaiken" element={<Temaiken />} />  {/* Página temaiken */}
         <Route path="/paranaTuRio" element={<ParanaTuRio />} />  {/* Página paranario */}
         <Route path="/vinoDeRio" element={<VinosDeRio />} />  {/* Página tvino*/}
+        <Route path='/MotoTur'element={<MotoTur />}/>
+        <Route path='/Representaciones'element={<Representaciones />}/>
       </Routes>
     </BrowserRouter>
   );

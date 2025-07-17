@@ -1,18 +1,24 @@
+import React, { useState } from 'react';
+import '../css/TresC.css';
+import Contacto from './Contacto';
 function ParanaTuRio() {
+    const [mostrarObjetivos, setMostrarObjetivos] = useState(false);
+const [mostrarAntecedentes, setMostrarAntecedentes] = useState(false);
+const [mostrarProductos, setMostrarProductos] = useState(false);
+
+const toggleObjetivos = () => setMostrarObjetivos(prev => !prev);
+const toggleAntecedentes = () => setMostrarAntecedentes(prev => !prev);
+const toggleProductos = () => setMostrarProductos(prev => !prev);
+    
     return (
         <section className="parana-turismo-section py-5">
             {/* Esta sección parece ser un encabezado o un bloque distintivo en la parte superior */}
-            <div>
-                <img
-                    src="/img/openclub-logo.png"
-                    alt="Open Club"
-                    className="openclub-logo mb-3"
-                />
-                <br />
-                <button className="openclub-button">
-                    ¡Visita nuestra web!
-                </button>
-            </div>
+                {/* HERO PRINCIPAL (Header con fondo gris claro) */}
+        <div className="hero-parana">
+            <img src="/img/openclub-logo.png" alt="Open Club" />
+            <h1>PARANÁ <span>TURÍO</span></h1>
+            <button>¡Visita nuestra web!</button>
+        </div>  
                {/* Grilla personalizada usando CSS Grid (para imágenes) */}
             <div
                 style={{
@@ -58,106 +64,183 @@ function ParanaTuRio() {
                 />
             </div>
 
-            {/* Sección Quienes somos - MODIFICADA PARA DISEÑO IZQUIERDA/DERECHA */}
-            <div className="container my-10 px-4">
-                {/* Usamos 'row' para crear columnas, 'align-items-center' para centrar verticalmente, 'justify-content-center' para centrar la fila */}
-                <div className="row align-items-center justify-content-center">
-                    {/* Columna para el título. 'text-md-end' alinea a la derecha en pantallas medianas y grandes, 'text-center' para pantallas pequeñas */}
-                    <div className="col-md-4 text-md-end text-center mb-4 mb-md-0">
-                        <h2 className="text-3xl font-bold text-gray-800">¿QUIÉNES SOMOS?</h2>
-                    </div>
-                    {/* Columna para la caja de texto */}
-                    <div className="col-md-8">
-                        <div className="bg-white shadow-lg rounded-xl p-6 text-left">
-                            <p className="text-gray-600">
-                                El Complejo Turístico Open Club surge en el año 2008 como una propuesta impulsada por Costanera 241 Viajes y Turismo, con el objetivo de ampliar los servicios ofrecidos a sus clientes.
-                                <br /><br />
-                                Lo que comenzó como un espacio complementario, rápidamente fue consolidándose como una infraestructura turística de referencia en la región.
-                                <br /><br />
-                                Actualmente, Open Club se posiciona como un complejo turístico integral y multifuncional, con servicios que abarcan desde el alojamiento y la gastronomía hasta espacios para el desarrollo de eventos, actividades recreativas y propuestas temáticas.
-                            </p>
+{/* QUIÉNES SOMOS - DISEÑO ALINEADO */}
+<div className="container my-5 px-4">
+    <div className="row justify-content-center align-items-center">
+        <div className="col-md-4 mb-4 mb-md-0 d-flex align-items-center">
+            <div className="d-flex align-items-center">
+                <div className="yellow-dot me-3"></div>
+                <h2 className="fw-bold mb-0">¿QUIÉNES<br />SOMOS?</h2>
+            </div>
+        </div>
+        <div className="col-md-8">
+            <div className="custom-box position-relative bg-white shadow-sm p-4 rounded-4">
+                <p className="text-muted mb-0">
+                    Paraná Tu Río es la única propuesta de travesías náuticas en la región que pone en valor el río Paraná y su entorno natural como escenario central de experiencias turísticas auténticas. Con el respaldo de años de trayectoria en el sector y un equipo altamente capacitado, ofrecemos servicios de calidad que combinan navegación, gastronomía con identidad y contacto directo con la cultura ribereña.
+                    <br /><br />
+                    Diseñamos cada experiencia con compromiso y pasión por mostrar lo mejor de nuestro litoral.
+                </p>
+                <div className="corner-gradient"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{/*oBJETIVOS - CON TOGGLE */}
+            <div className="container my-5 px-4">
+                <div className="row justify-content-center">
+                    <div className="col-md-10">
+                        <div
+                            className="d-flex align-items-center mb-4 cursor-pointer"
+                            onClick={toggleObjetivos}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <img src="/img/star-yellow.svg" alt="decoración" className="objetivos-deco" />
+                            <h2 className="fw-bold mb-0">
+                                OBJETIVOS {mostrarObjetivos ? '▲' : '▼'}
+                            </h2>
                         </div>
+
+                        {mostrarObjetivos && (
+                            <div className="row align-items-center fade-in">
+                                <div className="col-md-6">
+                                    <div className="custom-box position-relative bg-white shadow-sm p-4 rounded-4">
+                                        <p><strong>Asegurar la satisfacción plena de nuestros clientes</strong><br />
+                                            Brindar soluciones personalizadas que se adapten...
+                                        </p>
+                                        <p><strong>Consolidar el liderazgo en el Turismo de Reuniones</strong><br />
+                                            Consolidarnos como la DMC de referencia...
+                                        </p>
+                                        <p><strong>Apostar a la innovación y trabajo en equipo</strong><br />
+                                            Desarrollar estrategias innovadoras...
+                                        </p>
+                                        <div className="corner-gradient"></div>
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <img
+                                        src="/img/foto2.jpg"
+                                        alt="Objetivos Costanera"
+                                        className="decorated-img"
+                                    />
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
 
-        
-             {/* Sección OBJETIVOS */}
-            <div className="container my-5 px-4">
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center text-md-start">OBJETIVOS</h2>
-                <div className="row align-items-start justify-content-center">
-                    {/* Columna para el texto de Objetivos */}
-                    <div className="col-md-7 col-lg-8 text-left mb-4 mb-md-0"> {/* Ajusta el tamaño de la columna para el texto */}
-                        <p className="text-gray-700 mb-3">
-                            Promover el turismo náutico como una forma de acercarse a la naturaleza, la cultura
-                            y la identidad del litoral entrerriano.
-                        </p>
-                        <p className="text-gray-700 mb-3">
-                            Desarrollar una oferta diversa, accesible y de calidad en productos turísticos vinculados al río
-                            Paraná, tanto para viajeros individuales como para empresas.
-                        </p>
-                        <p className="text-gray-700 mb-3">
-                            Posicionar el río Paraná como un atractivo turístico de relevancia nacional e internacional,
-                            destacando su valor natural, histórico y cultural.
-                        </p>
-                        <p className="text-gray-700 mb-3">
-                            Brindar experiencias memorables, seguras y auténticas, siendo verdaderos anfitriones del río,
-                            mostrando sus paisajes, sus sabores y sus tradiciones.
-                        </p>
-                        <p className="text-gray-700">
-                            Ser referentes en el desarrollo del turismo náutico en la región, innovando continuamente en
-                            servicios y propuestas adaptadas a distintos públicos y necesidades.
-                        </p>
-                    </div>
-                    {/* Columna para la imagen */}
-                    <div className="col-md-5 col-lg-4 d-flex justify-content-center justify-content-md-end"> {/* Ajusta el tamaño de la columna para la imagen */}
-                        <img
-                            src="/img/IMG_1618_1.jpg" // Asegúrate de que esta sea la ruta correcta a tu imagen
-                            alt="Hombre en un bote en el Paraná"
-                            className="img-fluid rounded-xl shadow-lg" // 'img-fluid' para que la imagen sea responsiva, 'rounded-xl' y 'shadow-lg' para el estilo
-                            style={{ maxHeight: '400px', objectFit: 'cover' }} // Ajusta la altura máxima si es necesario
-                        />
-                    </div>
-                </div>
+            {/* PRODUCTOS - CON TOGGLE */}
+<div className="container my-5 px-4">
+    <div className="row justify-content-center">
+        <div className="col-md-10">
+            <div
+                className="d-flex align-items-center mb-4 cursor-pointer"
+                onClick={toggleProductos}
+                style={{ cursor: 'pointer' }}
+            >
+                <div className="yellow-dot me-3"></div>
+                <h2 className="fw-bold mb-0">
+                    PRODUCTOS {mostrarProductos ? '▲' : '▼'}
+                </h2>
             </div>
 
-            {/* Sección PRODUCTOS */}
-            <div className="container my-5 px-4">
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center text-md-start">PRODUCTOS</h2>
-                <div className="row justify-content-center">
-                    <div className="col-md-10 col-lg-8 text-left"> {/* Columna para la lista de productos */}
-                        <ul className="list-unstyled text-gray-700">
-                            <li className="mb-2">Excursiones Náuticas</li>
-                            <li className="mb-2">Gastronomía Isleña</li>
-                            <li className="mb-2">Alojamientos Flotantes</li>
-                            <li className="mb-2">Travesías Náuticas por el Paraná</li>
-                            <li className="mb-2">Alquiler de embarcaciones</li>
-                            <li className="mb-2">Campamentos de pesca</li>
-                            <li className="mb-2">Gastronomía a bordo</li>
-                            <li className="mb-2">Turismo corporativo</li>
-                            <li className="mb-2">Jornadas recreativas</li>
-                        </ul>
+            {mostrarProductos && (
+                <div className="fade-in">
+                    <p><strong>Tres C</strong> actúa como <strong>DMC (Destination Management Company)</strong>, ofreciendo la organización integral de congresos y convenciones llave en mano...</p>
+                    
+                    <ul className="mb-4">
+                        <li>Know-how</li>
+                        <li>Personal idóneo</li>
+                        <li>Infraestructura y logística propias</li>
+                        <li>Departamento de comunicación gráfica</li>
+                        <li>Reservas hoteleras</li>
+                        <li>Confirmaciones, venta y emisión de tickets aéreos</li>
+                        <li>Departamento de turismo receptivo</li>
+                        <li>Amplia gama de productos y excursiones propias</li>
+                        <li>Programas y post congresos para participantes y acompañantes</li>
+                    </ul>
+
+                    <div className="mb-4">
+                        <h5 className="text-warning fw-bold">⭐ TURISMO CORPORATIVO</h5>
+                        <p>Ofrecemos soluciones integrales... <br /><strong>Somos una empresa líder en turismo receptivo en la región con más de 30 años de experiencia.</strong></p>
+                    </div>
+
+                    <div className="mb-4">
+                        <h5 className="text-warning fw-bold">⭐ CONSULTORÍAS Y MENTORÍAS</h5>
+                        <p>Brindamos consultorías y mentorías... <br />Trabajamos a medida de cada proyecto, aportando visión estratégica...</p>
+                    </div>
+
+                    <div className="mb-4">
+                        <h5 className="text-warning fw-bold">⭐ VIAJES DE INCENTIVO</h5>
+                        <p>Tres C diseña viajes de incentivo únicos... con el respaldo de más de 30 años en el sector...</p>
+                    </div>
+
+                    <div className="mb-4">
+                        <h5 className="text-warning fw-bold">⭐ TEAM BUILDING – JORNADAS RECREATIVAS</h5>
+                        <p>Jornadas recreativas para organizaciones... respaldo por nuestra experiencia...</p>
+                    </div>
+
+                    <div className="mb-4">
+                        <h5 className="text-warning fw-bold">⭐ ORGANIZACIÓN DE EVENTOS ESPECIALES</h5>
+                        <p>Diseño, logística y producción integral... adaptados a cada cliente.</p>
                     </div>
                 </div>
+            )}
+        </div>
+    </div>
+</div>
+
+{/* ANTECEDENTES - CON TOGGLE */}
+<div className="container my-5 px-4">
+    <div className="row justify-content-center">
+        <div className="col-md-10">
+            <div
+                className="d-flex align-items-center mb-4 cursor-pointer"
+                onClick={toggleAntecedentes}
+                style={{ cursor: 'pointer' }}
+            >
+                <div className="yellow-dot me-3"></div>
+                <h2 className="fw-bold mb-0">
+                    ANTECEDENTES {mostrarAntecedentes ? '▲' : '▼'}
+                </h2>
             </div>
 
-            {/* Sección ANTECEDENTES */}
-            <div className="container my-5 px-4">
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center text-md-start">ANTECEDENTES</h2>
-                <div className="row justify-content-center">
-                    <div className="col-md-10 col-lg-8 text-left"> {/* Columna para el texto de antecedentes */}
-                        <p className="text-gray-700">
-                            "Paraná Río" es una propuesta original para el desarrollo turístico local con más de 10 años de experiencia en el ámbito del turismo náutico y fluvial en la región.
-                            Nuestro compromiso es con la promoción y desarrollo del turismo náutico, aprovechando la riqueza natural y cultural de nuestra zona.
-                            Creemos en la importancia de ofrecer experiencias auténticas que resalten la belleza del río Paraná y su entorno, fomentando el disfrute responsable de este patrimonio.
-                            Trabajamos para posicionar a Paraná como un referente en el turismo fluvial, garantizando servicios de calidad y momentos inolvidables para nuestros visitantes.
-                            <br/><br/>
-                            {/* Puedes añadir más texto aquí si lo deseas */}
-                        </p>
-                    </div>
+            {mostrarAntecedentes && (
+                <div className="fade-in">
+                    <p><strong>A continuación, algunos de los últimos eventos que hemos realizado:</strong></p>
+                    <ul className="list-unstyled">
+                        <li>Congreso de Oftalmología – Hotel & Spa Costanera – Colón, Entre Ríos.</li>
+                        <li>Taller Sudamericano sobre Preservación Ictícola del Río Paraná – Complejo Playas del Thompson – Paraná, Entre Ríos.</li>
+                        <li>Curso de Turismo Termal y Turismo Salud FEGRHA – Hotel Costa del Sol – Federación, Entre Ríos.</li>
+                        <li>Jornadas de Capacitación en Servicios Turísticos Termales – Biblioteca El Ateneo – Córdoba.</li>
+                        <li>Asamblea del Consejo Federal de Escribanos – Colegio de Escribanos – Paraná, Entre Ríos.</li>
+                        <li>Encuentro Latinoamericano de Salud Bucal, Hotel & Casino Mayorazgo – Paraná, Entre Ríos.</li>
+                        <li>Congreso FASGO, Colegio de Escribanos – Paraná, Entre Ríos.</li>
+                        <li>Congreso de Pastizales, Hotel & Casino Mayorazgo – Paraná, Entre Ríos.</li>
+                        <li>Congreso Nacional de SIDA, Colegio de Escribanos – Paraná, Entre Ríos.</li>
+                        <li>Congreso Sudamericano de Corredores Públicos Inmobiliarios, Teatro 3 de Febrero – Paraná, Entre Ríos.</li>
+                        <li>Educaal 2008, Facultad de Ciencias Económicas UNER – Paraná, Entre Ríos.</li>
+                        <li>CITUL 2008, Hotel Marán Suites & Towers – Paraná, Entre Ríos.</li>
+                        <li>Jornadas de Capacitación – Grupo HSBC – Hotel Howard Johnson Plaza & Resort – Paraná.</li>
+                        <li>XV° Seminario Nacional de Tesorerías Generales – Facultad de Ciencias Económicas UNER – Paraná, Entre Ríos.</li>
+                        <li>Jornada para Novo Nordisk Pharma Argentina – Complejo Playas del Thompson – Paraná, Entre Ríos.</li>
+                        <li>XVIII° Olimpiadas Farmacéuticas Nacionales 2012 – Paraná, Entre Ríos.</li>
+                        <li>Jornadas Team Building Autocrédito – Howard Johnson Plaza & Resort – Paraná, Entre Ríos.</li>
+                        <li>Jornada Team Building Danone – Howard Johnson Plaza & Resort – Paraná, Entre Ríos.</li>
+                        <li>Jornada Team Building – Pro Energy Services – Paraná, Entre Ríos.</li>
+                        <li>Jornada Team Building – Securitas – Paraná, Entre Ríos.</li>
+                        <li>Minitravesía en kayak – Nestlé – Paraná, Entre Ríos.</li>
+                        <li>Jornada Team Building – CNC – Paraná, Entre Ríos.</li>
+                        <li>Jornadas para CREDIMACO – Complejo Playas del Thompson – Paraná, Entre Ríos.</li>
+                        <li>Jornada Team Building – Temis Lostaló – Día de Campo – Paraná, Entre Ríos.</li>
+                        <li>Jornada Outdoor – Iglesia Cristo, la solución – Complejo Playas del Thompson – Paraná, Entre Ríos.</li>
+                    </ul>
                 </div>
-            </div>
-            
+            )}
+        </div>
+    </div>
+</div>
+<Contacto/>
 
         
 

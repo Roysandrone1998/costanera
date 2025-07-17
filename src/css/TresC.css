@@ -1,0 +1,187 @@
+.yellow-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.corner-gradient {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #FFD700;
+  border-top-left-radius: 100% 100%;
+
+}
+
+@media (max-width: 768px) {
+    .custom-box {
+        text-align: center;
+    }
+}
+/* Imagen decorativa con borde amarillo */
+.decorated-img {
+    border: 2px solid #FFD700;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Estilos de encabezados */
+h2.fw-bold {
+  font-size: 2rem;
+  color: #222;
+}
+
+/* Misión y Visión títulos */
+.custom-box h5 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.custom-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h2.fw-bold {
+    font-size: 1.4rem;
+  }
+}
+
+
+/* Fondo general gris muy claro */
+.parana-turismo-section {
+  background-color: #f9f9f9;
+}
+
+/* Estrella decorativa en lugar del punto */
+.yellow-dot {
+  width: 18px;
+  height: 18px;
+  background-image: url('/img/star-yellow.svg'); /* Usa una estrella SVG amarilla */
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+/* Imagen decorativa encima del título */
+.objetivos-deco {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Caja blanca con sombra suave */
+.custom-box {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* Triángulo decorativo en esquina */
+.triangle-decoration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-top: 20px solid #FFD700;
+  border-bottom-right-radius: 4px;
+}
+
+/* Imagen con borde amarillo */
+.decorated-img {
+  border: 2px solid #FFD700;
+  border-radius: 18px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Subtítulos de objetivos */
+.custom-box p strong {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+/* Caja MISIÓN/VISIÓN */
+.mision-vision-box {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  position: relative;
+  border: 1px solid #eee;
+}
+
+/* Estrella dentro del título de MISIÓN/VISIÓN */
+.mision-vision-box h5::before {
+  content: "★ ";
+  color: #FFD700;
+  margin-right: 6px;
+}
+
+.text-warning {
+  color: #fdd835;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.yellow-decor {
+  width: 25px;
+  height: 25px;
+  background-image: url('/img/es.png'); /* ícono estrella */
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.img-productos {
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid #fdd835; /* Amarillo estilo Figma */
+  object-fit: cover;
+  height: auto;
+}
+/* REPRESENTACIONES */
+
+.represent-card {
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.corner-yellow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(135deg, transparent 50%, #fcd34d 50%);
+  border-bottom-right-radius: 20px;
+}
+
+.estrella-yellow {
+  color: #fcd34d;
+  margin-right: 8px;
+}

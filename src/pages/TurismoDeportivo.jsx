@@ -1,9 +1,13 @@
 function TurismoDeportivo() {
         return (
-        <div>
-            <h1>TurismoDeportivo</h1>
-            <p>Aquí irán tus próximos TurismoDeportivo de arte.</p>
-        </div>
+        <section>
+            {/* HERO PRINCIPAL (Header con fondo gris claro) */}
+        <div className="hero-parana">
+            <img src="/img/openclub-logo.png" alt="Open Club" />
+            <h1>PARANÁ <span>TURÍO</span></h1>
+            <button>¡Visita nuestra web!</button>
+        </div>  
+        </section>
         );
     }
     

@@ -12,74 +12,425 @@ body {
   color: #333;
   line-height: 1.6;
 }
+.contact-section {
+    background: #f9f9f9; /* o el degradado que estás usando */
+}
 
+.btn-warning {
+    border-radius: 50px;
+    font-weight: bold;
+}
+.carousel-item {
+  transition: transform 0.6s ease;
+}
+.carousel-item .card {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item .card:hover {
+  transform: translateY(-5px);
+}
+.valores-section {
+  background: #ffffff;
+  padding: 60px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.card-img-top {
+  height: 160px;
+  object-fit: cover;
+}
 /* Contenedor central */
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-.nav{
-  color : black;
-
+/* Centrar logo */
+.logo-centered {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.25rem;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
+/* Estilo barra de búsqueda */
+.search-bar {
+    max-width: 300px;
+    width: 100%;
+    margin-left: auto;
 }
 
-nav li {
-  margin: 0 1rem;
+/* Menú desplegable custom */
+.dropdown-menu-custom {
+    position: absolute;
+    top: 56px;
+    left: 1rem;
+    width: 250px;
+    z-index: 1050;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+    border-radius: 0.5rem;
+    padding: 1rem;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0.75rem 1rem;
-  color: #af0f0f;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.2s, color 0.2s;
+/* Estilo ítems del menú */
+.dropdown-menu-custom .nav-link {
+    font-weight: 500;
+    color: #000;
+    padding: 0.5rem 0.75rem;
+    transition: background 0.2s ease;
 }
 
-nav a:hover {
-  background: #25b6cf;
-  color: #222;
-  border-radius: 4px;
+.dropdown-menu-custom .nav-link:hover {
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+}
+.openclub-section {
+  background-color: #f8f9fa;
 }
 
-.navbar-custom {
-  background-color: #0a0a23;
-  color: #fff;
-  padding: 1rem 2rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+/* Botón cerrar "X" */
+.close-btn {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    float: right;
+    cursor: pointer;
 }
 
-.navbar-custom a {
-  color: #facc15;
-  font-weight: bold;
-  text-decoration: none;
-  margin-right: 1rem;
+.dropdown-menu-custom .nav-link {
+    font-weight: 500;
+    color: #000;
+    padding: 0.5rem 0.75rem;
+    transition: background 0.2s ease;
 }
 
-.navbar-custom a:hover {
-  color: #eab308;
+.dropdown-menu-custom .nav-link:hover {
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
 }
 
-.openclub-section div{
-    background-color: #d9d9d9;
+/* Redes sociales */
+.social-icons {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+
+.social-icons a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
 }
 
 .openclub-logo {
-    width: 150px;
+  width: 150px;
 }
 
 .openclub-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: white;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
+
+.yellow-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #fdd835;
+  border-radius: 50%;
+}
+
+.custom-box {
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.triangle-decoration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-top: 25px solid #fdd835;
+}
+.quienes-somos-title {
+  position: relative;
+  display: inline-block;
+}
+
+.estrella {
+  position: absolute;
+  top: -10px;         /* más cerca del título */
+  left: -25px;        /* justo antes de la "Q" */
+  width: 25px;
+  height: auto;
+}
+
+.quienes-somos-div {
+  background-color: #f5f5f5;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.quienes-somos-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.quienes-somos-card {
+  flex: 2;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  color: #444;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  min-width: 300px;
+  position: relative;
+}
+.triangle-decoration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-top: 25px solid #fdd835; /* color amarillo */
+}
+/* Estilo personalizado para botón tipo Figma */
+.hero-parana {
+  height: 450px;
+  background-color: #D9D9D9; /* equivalente a bg-light de Bootstrap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-parana img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.hero-parana h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #212529;
+}
+
+.hero-parana h1 span {
+  font-weight: 300;
+}
+
+.hero-parana button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  border: 1px solid #212529;
+  background: transparent;
+  color: #212529;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hero-parana button:hover {
+  background-color: #212529;
+  color: #fff;
+  border-color: #212529;
+}
+
+.quienes-somos-section {
+  background-color: #f5f5f5;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.quienes-somos-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.quienes-somos-title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 250px;
+}
+
+.quienes-somos-title img {
+  width: 25px;
+  height: 25px;
+}
+
+.quienes-somos-title h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #333;
+  margin: 0;
+}
+
+.quienes-somos-card {
+  flex: 2;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  color: #444;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  min-width: 300px;
+}
+.objetivos-section {
+  background-color: #f5f5f5;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.objetivos-wrapper {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.objetivos-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.objetivos-title img {
+  width: 20px;
+  height: 20px;
+}
+
+.objetivos-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.objetivos-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  color: #444;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.objetivos-card ul {
+  list-style: disc inside;
+  padding-left: 0;
+  margin: 0;
+}
+
+.objetivos-card li {
+  margin-bottom: 1rem;
+}
+
+.quienes-somos-title {
+  position: relative;
+  display: inline-block; /* para que el contenedor se ajuste al contenido */
+}
+
+.quienes-somos-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.estrella {
+  position: absolute;
+  top: -20px; /* sube la estrella */
+  left: 10px; /* ajustá este valor hasta que quede sobre la "Q" */
+  width: 30px; /* tamaño de la estrella */
+  height: auto;
+}
+.objetivos-title {
+  position: relative;
+  display: inline-block;
+}
+
+.objetivos-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.objetivos-title .estrella {
+  position: absolute;
+  top: -8px;   /* Sube la estrella */
+  left: -12px;    /* Ajustá este valor hasta que esté centrada sobre la "O" */
+  width: 30px;  /* Tamaño de la estrella */
+  height: auto;
+}
+
+/* HERO */
+.hero-parana {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero-parana img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.hero-parana h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #212529;
+}
+
+.hero-parana h1 span {
+  font-weight: 300;
+}
+
+.openclub-button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid #212529;
+  background: transparent;
+  color: #212529;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.openclub-button:hover {
+  background-color: #212529;
+  color: #fff;
+  border-color: #212529;
+}
+

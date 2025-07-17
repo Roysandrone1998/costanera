@@ -1,11 +1,8 @@
-
 import { useState } from 'react';
 import Contacto from './Contacto';
 import '../css/TresC.css';
-function TurismoEducativo() {
 
-
-
+function MotoTur() {
     const [mostrarProductos, setMostrarProductos] = useState(false);
 
 
@@ -20,33 +17,10 @@ function TurismoEducativo() {
                 <div className="hero-parana text-center bg-light py-5 mb-5">
             <img src="/img/openclub-logo.png" alt="Open Club" className="openclub-logo mb-3" />
             <h1 className="display-4 fw-bold">
-            TURISMO<span className="text-primary">EDUCATIVO</span>
+            MOTO<span className="text-primary">TUR</span>
             </h1>
             <button className="openclub-button mt-3">¡Visita nuestra web!</button>
         </div>
-
-        {/* QUIÉNES SOMOS - DISEÑO ALINEADO */}
-<div className="container my-5 px-4">
-    <div className="row justify-content-center align-items-center">
-        <div className="col-md-4 mb-4 mb-md-0 d-flex align-items-center">
-            <div className="d-flex align-items-center">
-                <div className="yellow-dot me-3"></div>
-                <h2 className="fw-bold mb-0">¿QUIÉNES<br />SOMOS?</h2>
-            </div>
-        </div>
-        <div className="col-md-8">
-            <div className="custom-box position-relative bg-white shadow-sm p-4 rounded-4">
-                <p className="text-muted mb-0">
-                    Paraná Tu Río es la única propuesta de travesías náuticas en la región que pone en valor el río Paraná y su entorno natural como escenario central de experiencias turísticas auténticas. Con el respaldo de años de trayectoria en el sector y un equipo altamente capacitado, ofrecemos servicios de calidad que combinan navegación, gastronomía con identidad y contacto directo con la cultura ribereña.
-                    <br /><br />
-                    Diseñamos cada experiencia con compromiso y pasión por mostrar lo mejor de nuestro litoral.
-                </p>
-                <div className="corner-gradient"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
 
                 {/* GALERÍA GRID */}
                 <div
@@ -68,6 +42,28 @@ function TurismoEducativo() {
                     <img src="/img/foto5.jpg" alt="foto5" style={{ width: "100%", height: "100%", objectFit: "cover", gridColumn: "1 / span 3", gridRow: "2 / span 2" }} />
                 </div>
             </div>
+            {/* QUIÉNES SOMOS - DISEÑO ALINEADO */}
+<div className="container my-5 px-4">
+    <div className="row justify-content-center align-items-center">
+        <div className="col-md-4 mb-4 mb-md-0 d-flex align-items-center">
+            <div className="d-flex align-items-center">
+                <div className="yellow-dot me-3"></div>
+                <h2 className="fw-bold mb-0">¿QUIÉNES<br />SOMOS?</h2>
+            </div>
+        </div>
+        <div className="col-md-8">
+            <div className="custom-box position-relative bg-white shadow-sm p-4 rounded-4">
+                <p className="text-muted mb-0">
+                    Paraná Tu Río es la única propuesta de travesías náuticas en la región que pone en valor el río Paraná y su entorno natural como escenario central de experiencias turísticas auténticas. Con el respaldo de años de trayectoria en el sector y un equipo altamente capacitado, ofrecemos servicios de calidad que combinan navegación, gastronomía con identidad y contacto directo con la cultura ribereña.
+                    <br /><br />
+                    Diseñamos cada experiencia con compromiso y pasión por mostrar lo mejor de nuestro litoral.
+                </p>
+                <div className="corner-gradient"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
             {/* PRODUCTOS */}
             <div className="container my-5 px-4">
@@ -108,5 +104,4 @@ function TurismoEducativo() {
     );
 }
 
-
-    export default TurismoEducativo;
+export default MotoTur;
